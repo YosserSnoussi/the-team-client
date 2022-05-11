@@ -10,6 +10,12 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import {PublicityComponent} from './publicity/publicity.component';
 import {MainComponent} from './main/main.component';
+import {AppointmentComponent} from './appointment/appointment.component';
+import {AddAppointmentComponent} from './add-appointment/add-appointment.component';
+import {UpdateAppointmentComponent} from './update-appointment/update-appointment.component';
+import {ReclamationComponent} from './reclamation/reclamation.component';
+import {AddreclamationComponent} from './addreclamation/addreclamation.component';
+import {CalendarComponent} from './calendar/calendar.component';
 
 const routes: Routes = [
     // { path: 'home',             component: HomeComponent },
@@ -32,9 +38,13 @@ const routes: Routes = [
             // { path: 'login',          component: LoginComponent },
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             {path: 'publicity', component: PublicityComponent},
-            // {path: 'publication', component: PublicationComponent},
-            // {path: 'event', component: EventComponent},
-            // {path: 'publicity', component: PublicityComponent}
+             {path: 'appointments', component: AppointmentComponent},
+            {path: 'addappointment', component: AddAppointmentComponent},
+             {path: 'reclamation', component: ReclamationComponent},
+            {path: 'addreclamation', component: AddreclamationComponent},
+            {path: 'calendar', component: CalendarComponent},
+            {path: 'update-appointment/:id', component: UpdateAppointmentComponent}
+
         ]
 }
 

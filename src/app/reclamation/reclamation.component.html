@@ -1,0 +1,27 @@
+<h2>Claim list</h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Subject</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Actions</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let reclamation of reclamations">
+        <td>{{reclamation.id}}</td>
+        <td>{{reclamation.subject}}</td>
+        <td>{{reclamation.description}}</td>
+        <td>{{reclamation.date}}</td>
+        <td>
+            <button class ="btn btn-info">Update</button>
+            <button (click)="deleteReclamation(reclamation.id)" class ="btn btn-danger" style="margin-left: 10px">Delete</button>
+        </td>
+
+
+    </tr>
+    </tbody>
+</table>
